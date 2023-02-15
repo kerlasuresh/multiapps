@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+      body{
+        background-color:#00ffff
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class='text-center text-dark'>Login To Book Beast Movie Ticket</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter Your Name" class="form-control"><br>
+            <input type="number" name="seat" placeholder="select seating" class='form-control'><br>
+            <center>
+            <input type="submit" value="Book" class='btn btn-warning'>
+            <input type="reset" value="Clear" class='btn btn-danger'>
+          </center><br>
+          </form><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <table class='table table-bordered' >
+            {% if beastdata %}
+            <thead style="background-color:#0080ff">
+              <tr>
+                <th>Name</th>
+                <th>Tickets_Booked</th>
+                <th>Actions:</th>
+              </tr>
+            </thead>
+            <tbody style="background-color:#ff80aa">
+              {% for i in beastdata %}
+              <tr>
+                <td>{{ i.Name }}</td>
+                <td>{{ i.Tickets }}</td>
+                <td><a href="{% url 'updatebeast' i.id %}" class='btn btn-sm btn-warning'>Update</a>
+                  <a href="{% url 'delete_beast' i.id %}" class='btn btn-sm btn-dark'>Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+            {% endif %}
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+<center><a href="{% url 'moviespage' %}" class='btn btn-dark'>Home_Page</a></center>
+  </body>
+</html>

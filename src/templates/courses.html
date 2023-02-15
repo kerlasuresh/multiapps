@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+    body{
+    background-color: #ffff00
+    }
+    center{
+      margin-top: 5%
+    }
+
+    </style>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <h1 class='text-center text-warning'>Welcome To Nth Hyderabad</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'python.jpg' %}" style='height:100%; width:100%' class='img-thumbnail'>
+          <center><a href="{% url 'py' %}" class='btn btn-primary'>Python</a></center>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'django.jpg' %}" style='height:100%; width:100%' class='img-thumbnail'>
+          <center><a href="{% url 'dj' %}" class='btn btn-primary'>Django</a></center>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'javascript.png' %}" style='height:100%; width:100%' class='img-thumbnail'>
+          <center><a href="{% url 'js' %}" class='btn btn-primary'>JavaScript</a></center>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

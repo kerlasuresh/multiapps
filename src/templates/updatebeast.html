@@ -1,0 +1,31 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+      body{
+        background-color:#00ffff
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class='text-center text-dark'>Cancell (OR) Update Beast Movie Ticket</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <form method="POST" action="{% url 'save_update_best' beastdata.id %}">
+            {% csrf_token %}
+            <input type="text" name="name" value="{{ beastdata.Name }}" class="form-control"><br>
+            <input type="number" name="seat" value="{{ beastdata.Tickets }}" class='form-control'><br>
+            <center>
+            <input type="submit" value="Book" class='btn btn-warning'>
+            <input type="reset" value="Clear" class='btn btn-danger'>
+          </center><br>
+          </form><br><br>
+        </div>
+      </div>
+    </div>
+<center><a href="{% url 'beast' %}" class='btn btn-dark'>Booking_Page</a></center>
+  </body>
+</html>

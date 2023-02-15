@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <body>
+    <h1 class='text-center text-primary'>These are the States of india </h1>
+    <div class="container">
+      <img src="{% static 'indian-states.jpg' %}" style='height:100%; width:100%' class='img-thumbnail'>
+      <center><a href="{% url 'countrypage' %}" class='btn btn-outline-success'>Home_Page</a></center>
+
+
+    </div>
+
+  </body>
+</html>

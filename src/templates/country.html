@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+      body{
+        background-color: #ff00ff
+        }
+        center{
+          margin-top: 5%
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class='text-center text-dark'>This is COUNTRIES page</h1>
+    <div class="continer-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'india.jpg' %}" style='height:100%; width:100%' class='img-thumbnail bg-primary'>
+          <center><a href="{% url 'india' %}" class='btn btn-success'>india</a></center>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'chaina.jpg' %}" style='height:100%; width:100%' class='img-thumbnail bg-primary'>
+          <center><a href="{% url 'chaina' %}" class='btn btn-success'>chaina</a></center>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'russia.jpg' %}" style='height:100%; width:100%' class='img-thumbnail bg-primary'>
+          <center><a href="{% url 'russia' %}" class='btn btn-success'>russia</a></center>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <body>
+    <h1 class='text-center text-warning'>These Are The Chainese States</h1>
+    <div class="continer">
+      <img src="{% static 'chaina-states.jpg' %}" style='height=100%; width:100%' class='img-thumbnail bg-primary'>
+      <center><a href="{% url 'countrypage' %}" class='btn btn-outline-danger'>Home_Page</a></center>
+
+    </div>
+
+  </body>
+</html>

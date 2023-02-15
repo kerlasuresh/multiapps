@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+      body{
+        background-color: #ff6666
+      }
+      center{
+        margin-top: 5%
+      }
+    </style>
+
+  </head>
+  <body >
+    <h1 class='text-center text-dark'>iBomma Indian Tollywood Movies Site</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{% static 'beast.jpg' %}" style='height:60%; width:100%' class='img-thumbnail bg-success'>
+          <center><a href="{% url 'beast' %}" class='btn btn-warning'>Book_Ticket</a></center>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'kgf.jpg' %}" style='height:60%; width:100%' class='img-thumbnail bg-success'>
+          <center><a href="{% url 'kgf' %}" class='btn btn-warning'>Book_Ticket</a></center>
+      
+        </div>
+        <div class="col-md-4">
+          <img src="{% static 'rrr.jpg' %}" style='height:60%; width:100%' class='img-thumbnail bg-success'>
+          <center><a href="{% url 'rrr' %}" class='btn btn-warning'>Book_Ticket</a></center>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

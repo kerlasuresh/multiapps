@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body class="bg-info">
+    <h1 class="text-dark text-center"> This Is MAIN HOME_PAGE</h1><br><br>
+    <center>
+    <a href="{% url 'moviespage' %}" class="btn btn-warning">Movies_Page</a>
+        <a href="{% url 'coursespage' %}" class="btn btn-success">Couses_Page</a>
+        <a href="{% url 'countrypage' %}" class="btn btn-danger">Cuntries_Page</a>
+    </center>
+
+</body>
+</html>

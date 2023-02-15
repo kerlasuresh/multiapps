@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+    <style media="screen">
+      body{
+        background-color:#bfff00
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class='text-center text-dark'>Udate (OR) Cancell KGF Movie Ticket</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <form method="POST" action="{% url 'save_update_data' kgfdata.id %}">
+            {% csrf_token %}
+            <input type="text" name="name" value="{{ kgfdata.Name }}" class="form-control"><br>
+            <input type="number" name="seat" value="{{ kgfdata.Tickets }}" class='form-control'><br>
+            <center>
+            <input type="submit" value="update" class='btn btn-warning'>
+            <input type="reset" value="Clear" class='btn btn-danger'>
+            </center>
+          </form><br>
+          <center><a href="{% url 'kgf' %}" class='btn btn-dark'>Go_To Bookings</a></center>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
